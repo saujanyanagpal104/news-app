@@ -18,7 +18,7 @@ const Category = ({currentPage, setPageNotFound, pageNotFound}) => {
         setIsFetched(false);
         const fetchPosts = async () => {
             const fetchData = await fetch(`https://newsapi.org/v2/top-headlines?q=${searchValue}&category=${currentPage}&apiKey=${APIKEY}&page=${page}`, {
-                mode: 'no-cors'
+                mode: 'cors'
             }).then(res => res.json());
             if(fetchData.status === 'ok') {
                 if(fetchData.totalResults === 0) {
@@ -41,7 +41,7 @@ const Category = ({currentPage, setPageNotFound, pageNotFound}) => {
             <Pagination page={page} setPage={setPage} totalResults={totalResults} />
             {isFetched ? <div className='posts'>
                 {posts.map((post, index) => <Card key={post.title} post={post} />)}
-            </div> : <span className='loading-posts'>Wait!!! Loading posts...</span>}</> : <NotFound />}
+            </div> : <span className='loading-posts'>Wait!! Loading posts...</span>}</> : <NotFound />}
         </div>
     )
 };
