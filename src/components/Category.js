@@ -36,9 +36,9 @@ const Category = ({currentPage, setPageNotFound, pageNotFound}) => {
     return (
         <div className='posts-container'>
             {!pageNotFound ? <><SearchBar currentPage={currentPage} setSearchValue={setSearchValue} />
-            <Pagination page={page} setPage={setPage} totalResults={totalResults} />
+            {totalResults > 20 && <Pagination page={page} setPage={setPage} totalResults={totalResults} />}
             {isFetched ? <div className='posts'>
-                {posts.map((post, index) => <Card key={post.title} post={post} />)}
+                {posts.map((post, index) => <Card key={post.title} index={index} post={post} />)}
             </div> : <span className='loading-posts'>Wait!! Loading posts...</span>}</> : <NotFound />}
         </div>
     )
