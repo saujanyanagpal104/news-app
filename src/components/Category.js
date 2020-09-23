@@ -41,7 +41,7 @@ const Category = ({currentPage, setPageNotFound, pageNotFound}) => {
             <Pagination page={page} setPage={setPage} totalResults={totalResults} />
             {isFetched ? <div className='posts'>
                 {posts.map((post, index) => <Card key={post.title} post={post} />)}
-            </div> : <span className='loading-posts'>Wait!! Loading posts...</span>}</> : <NotFound />}
+            </div> : <span className='loading-posts'>Wait!!! Loading posts...</span>}</> : <NotFound />}
         </div>
     )
 };
