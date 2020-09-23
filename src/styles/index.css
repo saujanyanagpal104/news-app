@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #545454;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 30px;
+}
+
+.header a {
+    text-decoration: none;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.active-tab {
+    border-bottom: 1px solid #4696c9;
+    margin: 0px 5px;
+}
+
+.category {
+    color: #545454;
+    font-weight: 900;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+.posts-container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post {
+    width: 300px;
+    border: 1px solid #b1b1b1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.post-image {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 10px;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-buttons {
+    display: flex;
+}
+
+.like-button,.hide-button {
+    flex: 1;
+    padding: 15px;
+    background-color: #4696c9;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hide-button {
+    background-color: #ec1943;
+}
+
+.post-publish {
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin: 10px 0px;
+    font-size: 10px;
+}
+
+.post-title {
+    text-align: left;
+    font-weight: 600;
+    padding: 10px;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.post-author {
+    text-align: right;
+    padding: 0px 10px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.hide-card {
+    display: none;
+}
+
+.search-bar {
+    margin: 20px 0px;
+}
+
+.pagination {
+    margin: 20px 0px;
+    margin-top: 10px;
+}
+
+.disable-pagination {
+    color: #b1b1b1;
+    pointer-events: none;
+}
+
+.active-pagination {
+    color: #545454;
+    pointer-events: all;
+}
+
+.prev-pagination-block, .next-pagination-block {
+    padding: 0px 15px;
+    cursor: pointer;
+}
+.prev-pagination-block {
+    border-right: 1px solid #545454;
+}
+
+.search-bar form input {
+    padding: 15px 20px;
+    width: 250px;
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.search-bar form button {
+    padding: 15px 20px;
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: #545454;
+    color: #ffffff;
+}
+
+.search-bar form button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 500ms;
+}
