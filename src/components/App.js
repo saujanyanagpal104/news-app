@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Category from './Category';
-import NotFound from './NotFound';
 
 const App = (props) => {
     const [pageNotFound, setPageNotFound] = useState(false);
@@ -11,7 +10,7 @@ const App = (props) => {
     return (
         <div className='container'>
             <Header currentPage={urlParams} />
-            {!pageNotFound ? <Category currentPage={urlParams} setPageNotFound={setPageNotFound} /> : <NotFound /> }
+            <Category currentPage={urlParams} setPageNotFound={setPageNotFound} pageNotFound={pageNotFound} />
         </div>
     )
 };
