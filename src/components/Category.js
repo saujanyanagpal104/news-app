@@ -18,7 +18,7 @@ const Category = ({currentPage, setPageNotFound, pageNotFound}) => {
         setIsFetched(false);
         const fetchPosts = async () => {
             const fetchData = await fetch(`https://newsapi.org/v2/top-headlines?q=${searchValue}&category=${currentPage}&apiKey=${APIKEY}&page=${page}`, {
-                mode: 'cors'
+                mode: 'no-cors'
             }).then(res => res.json());
             if(fetchData.status === 'ok') {
                 if(fetchData.totalResults === 0) {
