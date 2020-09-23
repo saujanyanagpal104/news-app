@@ -34,8 +34,8 @@
 
 ### Approach
 
-Entry component is the *App* component which has Header and Category Components. Header component consists of the category tabs which are links created using React Router. Clicking these category tabs in the Header will generate the url with the category route and using the url for making articles request for the specific category. 
-Each Category has search bar, pagination and articles(showing 20 articles in each request)Articles shown in the form of Cards which are clickable(to redirect to the source of the article) and each card has the like and the hide button(storing like and hide states in the local storage to persist it on refresh).
+The entry component is the App component which has Header and Category Components. The header component consists of the category tabs which are links created using React Router. Clicking these category tabs in the Header will generate the URL with the category route and using the URL for making articles request for the specific category. 
+Each Category has a search bar, pagination, and articles(showing 20 articles in each request)Articles shown in the form of Cards which are clickable(to redirect to the source of the article) and each card has the like and the hide button(storing like and hide states in the local storage to persist it on refresh).
 
 *The api has some issues sometimes it gives 2-3 same articles in the responses which leads to show same key warning.* 
 
