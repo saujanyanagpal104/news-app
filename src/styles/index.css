@@ -162,3 +162,26 @@ body {
     transform: scale(1.05);
     transition: all 500ms;
 }
+
+@media(max-width: 600px) {
+    .search-bar form input {
+        width: 170px;
+    }
+
+    .posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(min-width: 600px) and (max-width: 1000px) {
+    .posts {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media(min-width: 1001px) and (max-width: 1300px) {
+    .posts {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
